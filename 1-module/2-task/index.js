@@ -7,9 +7,7 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  if (!name || name.length < 4 || !!name.match(' ')) return false;
-
-  return true;
+  return !!name && name.length >= 4 && !name.match(' ');
 }
 
 function sayHello() {
