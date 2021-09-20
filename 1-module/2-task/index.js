@@ -1,6 +1,3 @@
-/**
- * Эту функцию трогать не нужно
- */
 function print(text) {
   console.log(text);
 }
@@ -10,7 +7,7 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  // ваш код...
+  return !!name && name.length >= 4 && !name.match(' ');
 }
 
 function sayHello() {
@@ -22,3 +19,5 @@ function sayHello() {
     print('Некорректное имя');
   }
 }
+
+sayHello();
