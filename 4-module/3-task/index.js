@@ -19,15 +19,11 @@ function highlight(table) {
 
   for (let i = 1; i < table.rows.length; i++) {
     const row = table.rows[i];
-    let status = null;
+    const status = row.cells[statusIndex].dataset.available;
 
-    if (row.cells[statusIndex].dataset.available) {
-      status = row.cells[statusIndex].dataset.available;
-    }
-
-    if (typeof status === 'string') {
+    if (status) {
       row.classList.add(status === 'true' ? 'available' : 'unavailable');
-    } else if (status === null) {
+    } else {
       row.setAttribute('hidden', true);
     }
 
