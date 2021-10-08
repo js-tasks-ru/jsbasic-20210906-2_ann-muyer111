@@ -8,14 +8,14 @@ function initCarousel() {
 
   const checkPosition = () => {
     if (position === 0) {
-      buttonLeft.classList.add('hidden');
-      buttonRight.classList.remove('hidden');
+      buttonLeft.style.display = 'none';
+      buttonRight.style.display = null;
     } else if (position === inner.children.length - 1) {
-      buttonLeft.classList.remove('hidden');
-      buttonRight.classList.add('hidden');
+      buttonLeft.style.display = null;
+      buttonRight.style.display = 'none';
     } else {
-      buttonLeft.classList.remove('hidden');
-      buttonRight.classList.remove('hidden');
+      buttonLeft.style.display = null;
+      buttonRight.style.display = null;
     }
   };
 
@@ -28,7 +28,6 @@ function initCarousel() {
   });
 
   buttonLeft.addEventListener('click', () => {
-    console.log('!!!');
     position--;
     inner.style.transform = `translateX(-${position * carouselImgWidth}px)`;
     checkPosition();
