@@ -117,10 +117,6 @@
   transform: translate(-50%, -50%);
 }
 
-.hidden {
-  display: none;
-}
-
 @media all and (max-width: 767px) {
   .carousel {
     padding-bottom: 57px;
@@ -145,7 +141,6 @@
     margin-bottom: 0;
   }
 }
-
 
 @media (max-width: 992px) {
   .carousel__img {
